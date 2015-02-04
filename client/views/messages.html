@@ -1,0 +1,9 @@
+<template name="ajsMessages">
+  <h1>Oversigt</h1>
+
+  {{> quickForm collection='AjsMessages' id='ajs-messages-insert' type='insert'}}
+
+  {{#each this}}
+    <p><a href="{{pathFor route='ajsMessage' data=this}}">{{createdAt}} {{sender}}</a></p>
+  {{/each}}
+</template>
